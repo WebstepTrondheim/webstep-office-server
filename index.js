@@ -21,7 +21,7 @@ app.get('/api/mapinfo', (req, res) => {
   const data = [{
     deviceId: '1',
     position: positions[positionIndex],
-    alarmTriggered: true,
+    alarmTriggered: positionIndex % 2 === 0 ? true : false,
     timestamp: Date.now(),
     accuracy: 0
   }];
